@@ -1,14 +1,14 @@
 import streamlit as st
 import pandas as pd
 import joblib
+from pathlib import Path
 
 def main():
-    print("Hello from proyect-v-regression-team3!")  # Para terminal
+    print("Hello from proyect-v-regression-team3!")
 
 def app():
-    st.title("Formulario de Predicción de días en refugio 🏠")
+    st.title("Formulario de Predicción de días en Refugio 🏠")
     
-    # --- Formulario ---
     with st.form(key='input_form'):
         age = st.number_input("Edad (meses)", 0, 240, 12)
         weight = st.number_input("Peso (kg)", 0.0, 100.0, 5.0)
@@ -18,17 +18,26 @@ def app():
     
     if submit_button:
         input_df = pd.DataFrame({
-            'age': [age],
-            'weight': [weight],
-            'animal_type': [animal_type],
-            'breed': [breed]
+            'PetType': [animal_type],
+            'Breed': [breed],
+            'Color': ['Otro'],
+            'Size': ['Mediano'],
+            'AgeMonths': [age],
+            'WeightKg': [weight],
+            'AdoptionFee': [0],
+            'Vaccinated': [0],
+            'HealthCondition': [1],
+            'PreviousOwner': [0]
         })
-        # Cargar modelo
-        modelo = joblib.load("models/modelo_regresion.pkl")
+        
+        BASE_DIR = Path(__file__).resolve().parent.parent.parent
+        modelo_path = BASE_DIR / "models" / "baseline_best_model.joblib"
+        modelo = joblib.load(modelo_path)
+        
         pred = modelo.predict(input_df)
         st.subheader("Predicción de días en refugio")
         st.write(f"{pred[0]:.1f} días")
 
 if __name__ == "__main__":
-    main()  # Para terminal
-    app()   # Para Streamlit
+    main()
+    app()
