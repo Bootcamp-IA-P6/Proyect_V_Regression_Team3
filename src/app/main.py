@@ -13,7 +13,7 @@ def app():
         age = st.number_input("Edad (meses)", 0, 240, 12)
         weight = st.number_input("Peso (kg)", 0.0, 100.0, 5.0)
         animal_type = st.selectbox("Tipo de animal", ["Perro", "Gato", "Conejo", "Ave", "Otro"])
-        breed = st.text_input("Raza", "Desconocida")
+        breed = st.text_input("Raza", value="", placeholder="Escribe la raza aquí")
         submit_button = st.form_submit_button(label='Predecir')
     
     if submit_button:
