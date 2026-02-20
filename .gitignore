@@ -42,8 +42,8 @@ env/
 *.h5
 *.model
 models/
-data/
-*.csv
+#data/
+#*.csv
 
 # Streamlit
 .streamlit/
@@ -63,8 +63,8 @@ Thumbs.db
 .DS_Store
 
 # Jupyter
-# .ipynb_checkpoints/
-# *.ipynb
+#.ipynb_checkpoints/
+#*.ipynb
 
 # Logs
 *.log
