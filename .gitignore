@@ -46,8 +46,8 @@ models/
 #*.csv
 
 # Streamlit
-.streamlit/
-.streamlit/secrets.toml
+#.streamlit/
+#.streamlit/secrets.toml
 
 # Environment variables
 .env
