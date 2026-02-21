@@ -37,17 +37,17 @@ env/
 .DS_Store
 
 # Machine Learning
-*.pkl
-*.joblib
-*.h5
-*.model
-models/
+#*.pkl
+#*.joblib
+#*.h5
+#*.model
+#models/
 #data/
 #*.csv
 
 # Streamlit
-.streamlit/
-.streamlit/secrets.toml
+#.streamlit/
+#.streamlit/secrets.toml
 
 # Environment variables
 .env
