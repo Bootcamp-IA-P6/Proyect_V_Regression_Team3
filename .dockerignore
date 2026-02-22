@@ -1,0 +1,29 @@
+# Entornos virtuales
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Git
+.git/
+.gitignore
+
+# Notebooks y datos de desarrollo
+notebooks/
+data/
+*.ipynb
+*.ipynb_checkpoints
+
+# Modelos que no van a producción
+models/optimized_model.pkl
+models/best_baseline_pipeline.pkl
+models/cv_results.csv
+
+# Variables de entorno reales (nunca al contenedor)
+.env
+
+# Miscelánea
+*.md
+tests/
+.pytest_cache/
