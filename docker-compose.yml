@@ -1,0 +1,19 @@
+services:
+  streamlit:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: pet_adoption_app
+    ports:
+      - "8501:8501"
+    volumes:
+      # Toda la carpeta app (streamlit_app.py + supabase_client.py + database.py)
+      - ./src/app/:/app/src/app/
+      # Credenciales de Supabase — nunca en Git
+      - ./.streamlit/secrets.toml:/app/.streamlit/secrets.toml
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3

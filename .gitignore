@@ -37,13 +37,13 @@ env/
 .DS_Store
 
 # Machine Learning
-*.pkl
-*.joblib
-*.h5
-*.model
-models/
-data/
-*.csv
+#*.pkl
+#*.joblib
+#*.h5
+#*.model
+#models/
+#data/
+#*.csv
 
 # Streamlit
 .streamlit/
@@ -53,6 +53,7 @@ data/
 .env
 .env.local
 .env.*.local
+.env.example
 
 # Supabase
 .supabase/
@@ -63,8 +64,9 @@ Thumbs.db
 .DS_Store
 
 # Jupyter
-.ipynb_checkpoints/
-*.ipynb
+#.ipynb_checkpoints/
+#*.ipynb
 
 # Logs
 *.log
+echo ".streamlit/secrets.toml" >> .gitignore
