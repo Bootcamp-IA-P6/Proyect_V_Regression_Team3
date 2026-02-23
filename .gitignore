@@ -68,3 +68,4 @@ Thumbs.db
 
 # Logs
 *.log
+echo ".streamlit/secrets.toml" >> .gitignore
