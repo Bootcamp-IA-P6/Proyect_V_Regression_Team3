@@ -46,13 +46,14 @@ env/
 #*.csv
 
 # Streamlit
-#.streamlit/
-#.streamlit/secrets.toml
+.streamlit/
+.streamlit/secrets.toml
 
 # Environment variables
 .env
 .env.local
 .env.*.local
+.env.example
 
 # Supabase
 .supabase/
