@@ -318,10 +318,10 @@ uv run pytest tests/test_ensemble_metrics.py -v
 
 | Member | Role |
 |---|---|
-| Raúl | Cross-validation, Optuna hiperparameters, Docker |
-| Maryori | Modeling pipeline, Supabase integration, Database schema |
-| Michelle | Modeling baseline, Unit testing, CI validation |
-| Jose-Julio | Preprocessing data, Data exploratory analysis |
+| Raúl | Scrum Master |
+| Maryori | Backend Developer|
+| Michelle | Backend Developer |
+| Jose-Julio | Product Owner |
 
 ---
 
